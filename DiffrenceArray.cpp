@@ -27,6 +27,12 @@ int main()
        }
         for(ll i=0;i<n;i++)
        {
+           /* Here Difference Array concept is used to update range query in O(1) 
+            range(l , r , num) ==> arr[l] += num , arr[r+1] -= num;
+            and then iterate over array 
+            for i=0 to n
+                arr[i] = arr[i] + arr[i-1];
+           */
             ll d1 = (i+1) - C[i];
             if(d1 <= 0)
              {
