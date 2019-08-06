@@ -15,7 +15,7 @@ public:
         if(key == nums[mid])
             return mid;
         
-        if(nums[l]<=nums[mid])
+        if(nums[l]<=nums[mid]) // elements in [l..mid] are sorted
         {
             if(key>=nums[l] && key<=nums[mid])
             {
@@ -24,7 +24,7 @@ public:
             return searchNo(nums , mid+1, h,key);
         }
         
-        if(key>=nums[mid] && key<=nums[h])
+        if(key>=nums[mid] && key<=nums[h]) // elements in [mid..h] are sorted
         {
             return searchNo(nums , mid+1, h,key);
         }
